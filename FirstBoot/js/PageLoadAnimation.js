@@ -20,6 +20,7 @@ $(document).ready(function () {
             height: 500,
         }, 500,function() {
             $(".firstPageInnerContent").fadeIn();
+            
         });
     }, 1000)
 

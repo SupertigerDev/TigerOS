@@ -11,6 +11,7 @@ body {
     background-color: black;
     border-radius: 4px;
     transition: background-color 1s ease;
+    position: absolute;
 }
 
 .firstPageContent {
@@ -37,7 +38,7 @@ body {
 .button{
     margin-bottom: 10px;
     display: block;
-    background-color: rgba(0, 0, 0, 0.198);
+    background-color: rgba(0, 0, 0, 0.02);
     padding: 10px 3px 10px;
     color: white;
     font-size: 20px;
@@ -47,9 +48,13 @@ body {
 
 }
 .button:hover{
-    background-color: rgba(0, 0, 0, 0.02);
-    
+    background-color: rgba(0, 0, 0, 0.198);
 }
 .firstPageInnerContent{
     display: none;
 }
+#particles-js{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
