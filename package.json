@@ -1,0 +1,19 @@
+{
+  "name": "tigeros",
+  "version": "1.0.0",
+  "description": "NodeJS based operating system.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/supertiger1234/TigerOS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/supertiger1234/TigerOS/issues"
+  },
+  "homepage": "https://github.com/supertiger1234/TigerOS#readme"
+}
