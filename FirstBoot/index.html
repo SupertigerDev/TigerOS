@@ -1,30 +1,89 @@
-
 <html>
 
 <head>
+    <script>delete window.module;const {ipcRenderer} = require('electron');</script>
+    <link href="css/icon.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
     <script src="js/particles.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/ToggleSwitch.css" />
 
 </head>
 
 <body>
-        <div id="particles-js"></div>
+    <div id="particles-js"></div>
     <div class="container">
         <div class="firstPageContent">
 
             <div class="logo"></div>
             <span class="welcomeMessage">TigerOS</span>
             <div class="firstPageInnerContent">
-                <span class="button">Start</span>
-                <span class="button" onclick="exitButton()">Exit</span>
+                <span class="button" onclick="beginSetupPage()">Begin Setup</span>
+                <span class="button exitButton" onclick="exitButton()">Exit</span>
             </div>
 
         </div>
+        <div class="secondPageContent">
+            <div class="topInfo">
+                <i class="material-icons icon">network_check</i>
+                <span class="welcomeMessage">
+                    Internet Access
+                </span>
+                <p>Would you like TigerOS to be connected to the internet?</p>
+                <p>Enabling this option will allow you to access the internet and get latest updates.</p>
+            </div>
+            <label class="switch">
+                <input class="internetAccess" type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <div class="doneButton" onclick="thirdPage()">
+                <i class="material-icons icon">done</i>
+            </div>
+
+        </div>
+        <div class="thirdPageContent">
+            <div class="topInfo removeMargin">
+                <i class="material-icons icon">account_circle</i>
+                <span class="welcomeMessage">
+                    Create Your Account
+                </span>
+                <p>Enter In The Details Below</p>
+            </div>
+            <div class="usernameValidationMessage"></div>
+            <input class="inputTest username" type="text" placeholder="Username">
+
+            <input class="inputTest password" type="password" placeholder="Password (Optional)">
+            <div class="doneButton" onclick="fourthPage()">
+                <i class="material-icons icon">done</i>
+            </div>
+
+        </div>
+
+
+
+        <div class="fourthPageContent">
+            <div class="topInfo">
+                <i class="material-icons icon">done_all</i>
+                <span class="welcomeMessage">
+                    Success!
+                </span>
+                <p>TigerOS is now ready to use</p>
+            </div>
+            <p>Click to reboot your computer.</p>
+            <div class="doneButton">
+                <i class="material-icons icon">refresh</i>
+            </div>
+
+        </div>
+
+
+
+
     </div>
 
 </body>
+<script src="./js/SetupPages.js"></script>
 <script src="./js/PageLoadAnimation.js"></script>
 <script src="./js/LoadParticles.js"></script>
 <script src="./js/ExitButton.js"></script>
