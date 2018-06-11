@@ -1,0 +1,28 @@
+.leftContainer{
+    display: inline-block;
+    width: 200px;
+    margin-right: -4px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.411);
+    vertical-align: top;
+    color: rgb(56, 56, 56);
+}
+
+.rightContainer{
+    display: inline-block;
+    width: calc(100% - 200px);
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    vertical-align: top;
+}
+.filesTitle{
+    text-align: center;
+    line-height: 5px;
+    font-size: 20px;
+    border-bottom: solid rgba(65, 65, 65, 0.459) 1px;
+}
+.filesIcon{
+    display: block;
+    margin-top: 20px;
+    font-size: 50px;
+}

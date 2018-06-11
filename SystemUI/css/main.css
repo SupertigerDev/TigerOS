@@ -149,3 +149,26 @@ input {
 .removeMargin{
     margin: 0;
 }
+.accountListLogin .icon{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.accountListLogin{
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.129);
+    text-align: center;
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-top: 20px;
+
+}
+.accountListLogin:hover{
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.329);
+}

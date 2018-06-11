@@ -1,0 +1,86 @@
+#container {}
+
+#taskbar {
+	position: absolute;
+	bottom: 0;
+	background-color: rgba(255, 255, 255, 0.212);
+	width: 100%;
+	height: 48px;
+	border-radius: 5px;
+}
+
+.startButton {
+	width: 50px;
+	height: 50px;
+	background-image: url("../img/TigerLogo.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	border-radius: 50%;
+	transition: 0.5s;
+}
+
+.startButton:hover {
+	background-color: rgba(255, 255, 255, 0.171);
+}
+
+.startInterface {
+	display: none;
+	width: 400px;
+	height: 500px;
+	position: absolute;
+	bottom: -500px;
+	background-color: rgba(255, 255, 255, 0.383);
+	opacity: 0;
+	border-radius: 5px;
+}
+
+.menuStrip {
+	background-color: rgba(0, 0, 0, 0.100);
+	width: 100%;
+	height: 50px;
+	display: inline-flex;
+	border-radius: 5px;
+}
+
+.menuStripIcon {
+	margin-left: 3px;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	transition: 0.5s;
+}
+
+.menuStripIcon:hover {
+	background-color: rgba(255, 255, 255, 0.212);
+}
+
+.menuStripIconInner {
+	text-align: center;
+	padding-top: 25%;
+}
+
+.menuStripAccountName {
+	position: absolute;
+	right: 0;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.window .windowHeader{
+	height: 30px;
+	width: calc(100% - 10px);
+	background-color: rgba(255, 255, 255, 0.411);
+	user-select: none;
+	padding-left: 10px;
+	color: rgb(73, 73, 73);
+	border-bottom: solid rgba(65, 65, 65, 0.459) 0.030em;
+	line-height: 29px;
+}
+.window{
+	position: absolute;
+	width: 900px;
+	height: 700px;
+	background-color: rgba(255, 255, 255, 0.335);
+	overflow: hidden;
+	border: solid rgba(65, 65, 65, 0.459) 1px;
+
+}

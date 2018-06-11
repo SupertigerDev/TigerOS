@@ -46,7 +46,7 @@
      }
      username = inputUsername;
      password = inputPassword;
-     ipcRenderer.send('setupComplete', [{username: username, password: password, preferences: {internetAccess: internetAccess}}])
+     ipcRenderer.send('setupComplete', {username: username, password: password, preferences: {internetAccess: internetAccess}})
 
      $('.thirdPageContent').css("display", "table")
      $(".thirdPageContent").animate({
@@ -60,4 +60,7 @@
              marginLeft: 0
          }, 500)
      })
+ }
+ function restart(){
+     window.location = "../SystemUI/index.html"
  }
