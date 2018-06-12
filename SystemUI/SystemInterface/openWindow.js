@@ -16,10 +16,11 @@ function openWindow(windowToOpen, path){
     
         
         $("#container").append('<div id="'+ windowToOpen +'" class="window"><div id="'+ windowToOpen +'Header" class="windowHeader">' + originalName +'</div>'+application+'</div>')
-    
+        openedWindows.push(windowToOpen);
         dragElement(document.getElementById(windowToOpen));
+        appOpened(originalName, windowToOpen);
 
       });
 
 
-}
+    }

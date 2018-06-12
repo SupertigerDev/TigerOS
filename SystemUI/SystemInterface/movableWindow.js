@@ -1,4 +1,5 @@
-
+var openedWindows = [];
+var lastClickedWindow = "";
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -11,6 +12,25 @@ function dragElement(elmnt) {
   }
 
   function dragMouseDown(e) {
+
+
+    if (lastClickedWindow != e.path[1].id){
+
+      var x = document.getElementsByClassName("window");
+      var i;
+      for (i = 0; i < x.length; i++) {
+        if (x[i].style.zIndex >= 1){
+          x[i].style.zIndex -= 1;
+        }
+
+      }
+
+      document.getElementById(e.path[1].id).style.zIndex = openedWindows.length +1;
+    }
+    lastClickedWindow = e.path[1].id;
+
+
+
     e = e || window.event;
     // get the mouse cursor position at startup:
     pos3 = e.clientX;

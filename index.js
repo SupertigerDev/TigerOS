@@ -6,7 +6,7 @@ const {
 const {
     ipcMain
 } = require('electron');
-
+var dir = require('node-dir');
 const fs = require('fs');
 var database = {};
 
@@ -61,6 +61,22 @@ app.on('ready', () => {
         }
         event.sender.send('sendAccounts', userArray)
     })
+
+    ipcMain.on('filesGet', (event, location, targetWindow) => {
+
+        var filesFolders = []
+        fs.readdir(__dirname, function(err, items) {
+
+         
+            for (var i=0; i<items.length; i++) {
+                filesFolders.push({name: items[i], isDirectory: fs.lstatSync(__dirname + "/" + items[i]).isDirectory()})
+            }
+            event.sender.send('filesSend', filesFolders, targetWindow)
+        });
+         
+
+    })
+
 
 });
 
