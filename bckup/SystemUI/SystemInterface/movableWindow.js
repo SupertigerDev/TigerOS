@@ -41,7 +41,6 @@ function dragElement(elmnt) {
   }
 
   function elementDrag(e) {
-
     e = e || window.event;
     // calculate the new cursor position:
     pos1 = pos3 - e.clientX;
@@ -49,15 +48,7 @@ function dragElement(elmnt) {
     pos3 = e.clientX;
     pos4 = e.clientY;
     // set the element's new position:
-
-
-
-
-    if($("body").height() - e.clientY >= 49){
-      elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    }
-
-
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
     elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
   }
 

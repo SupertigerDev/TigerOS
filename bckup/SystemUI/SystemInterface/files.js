@@ -1,5 +1,5 @@
 
- function appOpened(originalName, windowToOpen, div){
+ function appOpened(originalName, windowToOpen){
     ipcRenderer.send("filesGet", "/", windowToOpen)
 
 
@@ -14,8 +14,8 @@
             }
             
         });
-
-        $("#"+ targetWindow +" .filesFoldersArea").html(append)
+        target = document.getElementById(windowToOpen).getElementsByClassName("filesFoldersArea")[0];
+        target.innerHTML = append
     
     })
  }

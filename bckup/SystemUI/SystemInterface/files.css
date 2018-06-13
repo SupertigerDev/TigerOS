@@ -1,0 +1,71 @@
+.leftContainer{
+    display: inline-block;
+    width: 200px;
+    margin-right: -4px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.411);
+    vertical-align: top;
+    color: rgb(56, 56, 56);
+}
+
+.rightContainer{
+    display: inline-block;
+    width: calc(100% - 200px);
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    vertical-align: top;
+}
+.filesTitle{
+    text-align: center;
+    line-height: 5px;
+    font-size: 20px;
+    border-bottom: solid rgba(65, 65, 65, 0.459) 1px;
+}
+.filesIcon{
+    display: block;
+    margin-top: 20px;
+    font-size: 50px;
+}
+.place{
+    transition: 0.5s;
+    height:50px; 
+    line-height: 3.5;
+    padding-left: 20px;
+}
+.place:hover{
+    background-color: rgba(0, 0, 0, 0.103)
+}
+.placesIcons{
+    vertical-align: text-top;
+    padding-right: 5px;
+}
+.filesAddressBar{
+    background-color: rgba(0, 0, 0, 0.079);
+    width: 100%;
+    height: 60px;
+}
+.filesAddressBarInner{
+    width: calc(100% - 30px);
+    margin-left: 15px;
+    height: 30px;
+    margin-top: 15;
+    border: none;
+    padding: 10px;
+}
+.filesFoldersArea{
+    overflow: hidden;
+    overflow-y: scroll;
+    height: calc(100% - 90px);
+}
+.fileFolder{
+    color: rgb(59, 59, 59);
+    transition: 0.5s;
+    padding: 10px;
+}
+.fileFolder:hover{
+    background-color: rgba(0, 0, 0, 0.137);
+}
+.thumbnailFiles{
+    color: rgb(59, 59, 59);
+    vertical-align: text-bottom;
+}
