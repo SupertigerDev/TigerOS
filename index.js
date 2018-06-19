@@ -65,15 +65,20 @@ app.on('ready', () => {
     ipcMain.on('filesGet', (event, location, targetWindow) => {
 
         var filesFolders = []
-        fs.readdir(__dirname, function(err, items) {
-
-         
-            for (var i=0; i<items.length; i++) {
-                filesFolders.push({name: items[i], isDirectory: fs.lstatSync(__dirname + "/" + items[i]).isDirectory()})
+        fs.readdir(__dirname + location, function (err, items) {
+            if (typeof items == "undefined") {
+                // event.sender.send('filesSend', false)
+                //return
             }
-            event.sender.send('filesSend', filesFolders, targetWindow)
+            for (var i = 0; i < items.length; i++) {
+                filesFolders.push({
+                    name: items[i],
+                    isDirectory: fs.lstatSync(__dirname + location + items[i]).isDirectory()
+                })
+            }
+            event.sender.send('filesSend', filesFolders, targetWindow, location)
         });
-         
+
 
     })
 
